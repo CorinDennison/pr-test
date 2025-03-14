@@ -1,10 +1,16 @@
-# Author: Corin Dennison
-# Date: 3/13/2025
-# This program asks the user for input and then prints that many powers of two.
+"""
+This program asks the user for input and then prints that many powers of two.
 
-# keeps asking the user for input until they either respond with an integer or quit
-# returns None if the user quits, otherwise returns the integer
+It includes a function for returning powers of two and a function for
+getting user integer input
+
+usage: import pr_test
+"""
+
 def get_positive_integer_input(question_string):
+    """keeps asking the user for input until they either respond with an integer or quit
+    returns None if the user quits, otherwise returns the integer
+    """
     # Ask user for input
     user_input = input(question_string).strip()
     # if the input isn't an integer, keep looping until it is, or they quit
@@ -15,13 +21,12 @@ def get_positive_integer_input(question_string):
         user_input = input(question_string)
     return int(user_input)
 
-# returns some number of powers of two
 def powers_of_2(amount):
+    """returns some number of powers of two"""
     # build the list of powers of 2
     p_of_2 = []
     for x in range(1, amount + 1):
         p_of_2.append(2**x)
-
     return p_of_2
 
 # loop until the user quits
