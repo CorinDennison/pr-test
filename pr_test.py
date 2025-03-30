@@ -21,6 +21,7 @@ def get_positive_integer_input(question_string):
         user_input = input(question_string)
     return int(user_input)
 
+
 def powers_of_2(amount):
     """returns some number of powers of two"""
     # build the list of powers of 2
